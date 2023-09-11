@@ -17,6 +17,7 @@ This repository contains Kubernetes configuration files and setup instructions f
 ## Introduction
 
 The PLG stack is a popular combination of open-source tools for monitoring and log management:
+![image](https://github.com/infinite8loop/PLG-Prometheus-Loki-Grafana-Stack/assets/103845823/6dcf20c1-33dd-45db-aacb-c585ab622531)
 
 - **Prometheus**: An open-source monitoring and alerting toolkit.
 - **Loki**: A horizontally-scalable, highly-available, multi-tenant log aggregation system.
@@ -76,6 +77,8 @@ bash
 kubectl apply -f fluentbit-sidecar/
 sample app along with Fluentbit will be deployed in your cluster. You can access it via a NodePort or use an ingress controller to expose it externally.
 
+Logs are streamed to Grafana:
+![image](https://github.com/infinite8loop/PLG-Prometheus-Loki-Grafana-Stack/assets/103845823/8289eeff-f668-4131-811a-62dda9dc8304)
 
 Customization
 You can customize each component's configuration by editing the respective YAML files. Additionally, you can add your own dashboards and alerts to Grafana to monitor your specific services and applications.
