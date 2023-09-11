@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  labels:
+    app.kubernetes.io/name: grafana
+  name: grafana-qa-pv
+  namespace: loki
+spec:
+  accessModes:
+  - ReadWriteOnce
+  awsElasticBlockStore:
+    fsType: ext4
+    volumeID: aws://us-east-1a/vol-*****
+  capacity:
+    storage: 30Gi
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: gp2
+  volumeMode: Filesystem

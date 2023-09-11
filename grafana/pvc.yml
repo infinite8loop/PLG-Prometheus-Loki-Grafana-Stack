@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app.kubernetes.io/name: grafana
+  name: grafana-qa-pvc
+  namespace: loki
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 30Gi
+  storageClassName: gp2
+  volumeMode: Filesystem
+  volumeName: grafana-qa-pv
